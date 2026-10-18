@@ -3,15 +3,15 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "iso4217-audit"
-version = "0.1.0"
-description = "Find the currency codes a codebase still uses after ISO 4217 withdrew them"
+name = "iso-audit"
+version = "0.2.0"
+description = "Find the ISO 4217 currency codes and ISO 3166 country codes a codebase still uses after the standard withdrew them"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "yu2971512385-ui" }]
-keywords = ["iso4217", "currency", "linting", "data-quality", "ci"]
+keywords = ["iso4217", "iso3166", "currency", "country-codes", "linting", "data-quality", "ci"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Environment :: Console",
@@ -21,17 +21,17 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yu2971512385-ui/iso4217-audit"
-Issues = "https://github.com/yu2971512385-ui/iso4217-audit/issues"
+Homepage = "https://github.com/yu2971512385-ui/iso-audit"
+Issues = "https://github.com/yu2971512385-ui/iso-audit/issues"
 
 [project.scripts]
-iso4217-audit = "iso4217_audit:main"
+iso-audit = "iso_audit:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=7", "pycountry>=23"]
 
 [tool.setuptools.packages.find]
-include = ["iso4217_audit*"]
+include = ["iso_audit*"]
 
 [tool.pytest.ini_options]
-testpaths = ["test_iso4217_audit.py"]
+testpaths = ["test_iso_audit.py"]
